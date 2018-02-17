@@ -1,0 +1,7 @@
+[user]
+	email = caherdenez@gmail.com
+	name = Cesar Augusto
+[push]
+	default = matching
+[core]
+	editor = vim

@@ -1,0 +1,7 @@
+#Alias 
+
+alias gr="go run"
+alias dk="docker"
+alias sbl="~/apps/sublime/sublime_text"
+alias navicat="/opt/navicat101/navicat &"
+

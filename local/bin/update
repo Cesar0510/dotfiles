@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+. src/utils
+
+print 'hola'
+$ROOT_DIR
