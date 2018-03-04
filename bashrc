@@ -117,8 +117,8 @@ if ! shopt -oq posix; then
 fi
 
 # added by Miniconda3 4.3.21 installer
-export PATH="$PATH:$HOME/apps/miniconda3/bin"
-export VIRTUALENVWRAPPER_PYTHON="$HOME/apps/miniconda3/bin/python"
+# export PATH="$PATH:$HOME/apps/miniconda3/bin"
+# export VIRTUALENVWRAPPER_PYTHON="$HOME/apps/miniconda3/bin/python"
 ####
 RED="\[\033[0;31m\]"
 GREEN="\[\033[0;32m\]"
@@ -128,31 +128,29 @@ PURPLE="\[\033[0;35m\]"
 CYAN="\[\033[0;36m\]"
 LIGHT_GREEN="\[\033[1;32m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
-export GIT_PS1_SHOWDIRTYSTATE=true 
-#source "$HOME/.personal_config/git_prompt_.sh""
-# PS1="($CYAN@\u$LIGHT_GRAY)$BLUE[$RED{$(date +"%H:%M")} $PURPLE\w$BLUE]$YELLOW$(__git_ps1 '(%s)') $LIGHT_GREEN \n >>> $LIGHT_GRAY"
-# PS1='\[\033[0;36m\]\[\033[0m\033[0;31m\]{$(date +"%H:%M")}\[\033[0;36m\] @ \w\[\033[0;32m\]$(__git_ps1)\n\[\033[1;32m\] >>> \[\033[0m\]'
+export GIT_PS1_SHOWDIRTYSTATE=true
+
 PS1='\[\033[0;36m\]\[\033[0m\033[0;31m\]{$(date +"%H:%M")}\[\033[0;36m\] @ \w\[\033[0;32m\]$(__git_ps1 " (%s)")\n\[\033[1;32m\] >>> \[\033[0m\]'
-#PS1="$BLUE[$RED{$(date +"%H:%M")} $PURPLE\w$BLUE]$YELLOW$(__git_ps1 '(%s)') $LIGHT_GREEN \n >>> $LIGHT_GRAY"
-source virtualenvwrapper.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin:$GOPATH/bin"
 . ~/dotfiles/aliasrc
 
 export PATH="$HOME/.yarn/bin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PATH:$PYENV_ROOT/bin"
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PATH:$PYENV_ROOT/bin"
 
-##if command -v pyenv 1>/dev/null 2>&1; then
-##  eval "$(pyenv init -)"
-##fi
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
 #eval "$(pyenv virtualenv-init -)"
-
+# added by Miniconda3 4.3.21 installer
+export PATH="$PATH:$HOME/apps/miniconda3/bin"
+export VIRTUALENVWRAPPER_PYTHON="$HOME/apps/miniconda3/bin/python"
+source virtualenvwrapper.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -160,3 +158,9 @@ export PATH="$PATH:$PYENV_ROOT/bin"
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /home/caherdenez/.nvm/versions/node/v6.11.3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/caherdenez/.nvm/versions/node/v6.11.3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/caherdenez/Descargas/google-cloud-sdk/path.bash.inc' ]; then source '/home/caherdenez/Descargas/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/caherdenez/Descargas/google-cloud-sdk/completion.bash.inc' ]; then source '/home/caherdenez/Descargas/google-cloud-sdk/completion.bash.inc'; fi
