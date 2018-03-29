@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+# Standard Output
+# ---------------
+
+# Buildpack Steps.
+step() {
+  if [[ "$*" == "-" ]]; then
+    read -r output
+  else
+    output=$*
+  fi
+  echo -e "\\e[1m\\e[36m=== $output\\e[0m"
+  unset output
+}
+
+# Buildpack Error.
+error() {
+  if [[ "$*" == "-" ]]; then
+    read -r output
+  else
+    output=$*
+  fi
+  echo -e "\\e[1m\\e[31m=!= $output\\e[0m"
+}
+
+# Buildpack Warning.
+warn() {
+  if [[ "$*" == "-" ]]; then
+    read -r output
+  else
+    output=$*
+  fi
+  echo -e "\\e[1m\\e[33m=!= $output\\e[0m"
+}
+
+# Buildpack Utilities
+# -------------------
+
+# Usage: $ set-env key value
+# NOTICE: Expects PROFILE_PATH & EXPORT_PATH to be set!
+set_env() {
+  # TODO: automatically create profile path directory if it doesn't exist.
+  echo "export $1=$2" >> "$PROFILE_PATH"
+  echo "export $1=$2" >> "$EXPORT_PATH"
+}
+
+# Usage: $ set-default-env key value
+# NOTICE: Expects PROFILE_PATH & EXPORT_PATH to be set!
+set_default_env() {
+  echo "export $1=\${$1:-$2}" >> "$PROFILE_PATH"
+  echo "export $1=\${$1:-$2}" >> "$EXPORT_PATH"
+}
+
+# Usage: $ un-set-env key
+# NOTICE: Expects PROFILE_PATH to be set!
+un_set_env() {
+  echo "unset $1" >> "$PROFILE_PATH"
+}
+
+nowms() {
+  date +%s%3N
+}
