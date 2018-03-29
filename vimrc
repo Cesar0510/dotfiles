@@ -23,6 +23,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'pangloss/vim-javascript'
 " All of your Plugins must be added before the following line
 "
 "
@@ -45,5 +46,4 @@ filetype plugin on
 "       in your new shortcut.
 "{rhs}  right hand side, is the sequence of keys that the {lhs} shortcut keys
 "       will execute when entered.
-
-nmap <C-k><C-b> :NERDTree <CR>
+map <C-n> :NERDTreeToggle<CR>
