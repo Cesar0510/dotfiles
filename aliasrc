@@ -1,8 +1,16 @@
 #Alias 
 
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..='cd ..'
+
 alias gr="go run"
 alias dk="docker"
-alias sbl="~/apps/sublime/sublime_text"
-alias navicat="/opt/navicat101/navicat &"
+
+alias sbl="/opt/sublime_text_3/sublime_text"
+alias code="/opt/VSCode-linux-x64/code"
+
 alias c="clear"
 alias e="vim"
