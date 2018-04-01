@@ -256,3 +256,11 @@ PS1='\[\033[0;36m\]\[\033[0m\033[0;31m\]{$(date +"%H:%M")}\[\033[0;36m\] @ \w\[\
 . ~/dotfiles/git-completion
 . ~/dotfiles/git-prompt
 . ~/dotfiles/aliasrc
+. ~/dotfiles/pyenv
+. ~/.local/bin/virtualenvwrapper.sh
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/caherdenez/.nvm/versions/node/v6.14.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/caherdenez/.nvm/versions/node/v6.14.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/caherdenez/.nvm/versions/node/v6.14.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/caherdenez/.nvm/versions/node/v6.14.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash

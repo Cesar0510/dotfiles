@@ -25,15 +25,24 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
+export rvm_project_rvmrc=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-export PATH="$PATH:/opt/go192/bin"
+
+
+
 export GOPATH="$HOME/go_workspace"
-export PATH="$PATH:$GOPATH/bin/" 
+
 export PATH=~/.local/bin:$PATH
 export PATH=$PATH:/opt/robo3t/bin
+export PYENV_ROOT="$HOME/.pyenv"
+
+export PATH="$PATH:/opt/go192/bin"
+export PATH="$PATH:$GOPATH/bin/" 
+
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 

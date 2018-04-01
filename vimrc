@@ -6,8 +6,10 @@ set laststatus=2
 "" highlight ColorColumn ctermbg=gray
 set colorcolumn=120
 set nocompatible              " be iMproved, required
+
 filetype off                  " required
 
+syntax on
 "################################"
 set directory=$HOME/.vim/swapfiles/
 set rtp+=/usr/lib/python3.6/site-packages/powerline/bindings/vim
