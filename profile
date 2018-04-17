@@ -22,16 +22,14 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+RVM_PATH=$HOME/.rvm
+export PATH="$PATH:$RVM_PATH/bin"
+[ -s "$RVM_PATH/scripts/rvm" ] && source "$RVM_PATH/scripts/rvm" # Load RVM into a shell session *as a function*
+#export rvm_project_rvmrc=1
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export rvm_project_rvmrc=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-
 
 
 export GOPATH="$HOME/go_workspace"
@@ -44,5 +42,5 @@ export PATH="$PATH:/opt/go192/bin"
 export PATH="$PATH:$GOPATH/bin/" 
 
 export PATH="$PYENV_ROOT/bin:$PATH"
-
+export PATH="$PATH:/opt/google-cloud-sdk/bin"
 

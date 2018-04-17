@@ -1,4 +1,4 @@
-#Alias 
+#Alias
 
 
 alias ll='ls -alF'
@@ -7,6 +7,10 @@ alias l='ls -CF'
 alias ..='cd ..'
 
 alias gr="go run"
+
+## Docker Alias
+## https://gist.github.com/BretFisher/70c61f0e6099eb60fcc6bc4569f21da9
+alias dkm='docker rm $(docker ps -aq)'
 alias dk="docker"
 
 alias sbl="/opt/sublime_text_3/sublime_text"
