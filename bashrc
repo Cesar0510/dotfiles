@@ -238,10 +238,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# added by Miniconda3 4.3.21 installer
-# export PATH="$PATH:$HOME/apps/miniconda3/bin"
-# export VIRTUALENVWRAPPER_PYTHON="$HOME/apps/miniconda3/bin/python"
-####
+
 RED="\[\033[0;31m\]"
 GREEN="\[\033[0;32m\]"
 YELLOW="\[\033[0;33m\]"

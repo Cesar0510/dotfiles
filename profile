@@ -21,6 +21,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+#### LOCAL VARS
+DOTFILE_DIR="$HOME/dotfiles"
+DOTFILE_LOCAL="$DOTFILE_DIR/local"
+DOTFILE_BIN="$DOTFILE_LOCAL/bin"
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 RVM_PATH=$HOME/.rvm
 export PATH="$PATH:$RVM_PATH/bin"
@@ -38,9 +43,10 @@ export PATH=~/.local/bin:$PATH
 export PATH=$PATH:/opt/robo3t/bin
 export PYENV_ROOT="$HOME/.pyenv"
 
-export PATH="$PATH:/opt/go192/bin"
-export PATH="$PATH:$GOPATH/bin/" 
+export PATH="$PATH:/opt/go1.10.2/bin"
+export PATH="$PATH:$GOPATH/bin/"
 
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$PATH:/opt/google-cloud-sdk/bin"
-
+export PATH="$PATH:$DOTFILE_LOCAL/miniconda3/bin"
+export PATH="$PATH:$DOTFILE_BIN"
