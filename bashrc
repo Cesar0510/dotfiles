@@ -259,6 +259,7 @@ PS1='\[\033[0;36m\]\[\033[0m\033[0;31m\]{$(date +"%H:%M")}\[\033[0;36m\] @ \w\[\
 . ~/dotfiles/aliasrc
 . ~/dotfiles/pyenv
 . ~/dotfiles/docker
+. ~/dotfiles/docker-compose
 . ~/.local/bin/virtualenvwrapper.sh
 
 
