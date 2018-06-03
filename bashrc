@@ -248,15 +248,16 @@ CYAN="\[\033[0;36m\]"
 LIGHT_GREEN="\[\033[1;32m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 export GIT_PS1_SHOWDIRTYSTATE=true
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
+# export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
 PS1='\[\033[0;36m\]\[\033[0m\033[0;31m\]{$(date +"%H:%M")}\[\033[0;36m\] @ \w\[\033[0;32m\]$(__git_ps1 " (%s)")\n\[\033[1;32m\] >>> \[\033[0m\]'
 
-. ~/dotfiles/git-completion
+. ~/dotfiles/complete/git-completion
+. ~/dotfiles/complete/docker-compose
+. ~/dotfiles/complete/docker
+
 . ~/dotfiles/git-prompt
 . ~/dotfiles/aliasrc
 . ~/dotfiles/pyenv
-. ~/dotfiles/docker
-. ~/dotfiles/docker-compose
 . ~/.local/bin/virtualenvwrapper.sh
 
 
@@ -269,3 +270,10 @@ export GPG_TTY=$(tty)
 gc(){
     git rev-parse --abbrev-ref HEAD
 }
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/caherdenez/.nvm/versions/node/v8.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/caherdenez/.nvm/versions/node/v8.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/caherdenez/.nvm/versions/node/v8.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/caherdenez/.nvm/versions/node/v8.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash

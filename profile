@@ -50,3 +50,5 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$PATH:/opt/google-cloud-sdk/bin"
 export PATH="$PATH:$DOTFILE_LOCAL/miniconda3/bin"
 export PATH="$PATH:$DOTFILE_BIN"
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
+complete -C $(which aws_completer) aws
