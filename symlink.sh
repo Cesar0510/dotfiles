@@ -15,12 +15,12 @@ for value in `ls`; do
 
     step "Backup origial files"
     if [ -f "$HOME/.$value" ];then
-	 mv "$HOME/.$value" backup/$value.dotfile
+      mv "$HOME/.$value" backup/$value.dotfile
     fi
-    
+
     step "$HOME/.$value"
-    ln -s -b "dotfiles/$value" "$HOME/.$value" 
-    
+    ln -s -b "dotfiles/$value" "$HOME/.$value"
+
 done
 
 step "Symlinking successful."

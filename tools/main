@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+
+
+gc(){
+    git rev-parse --abbrev-ref HEAD
+}
