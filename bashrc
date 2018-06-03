@@ -251,9 +251,8 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 # export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
 PS1='\[\033[0;36m\]\[\033[0m\033[0;31m\]{$(date +"%H:%M")}\[\033[0;36m\] @ \w\[\033[0;32m\]$(__git_ps1 " (%s)")\n\[\033[1;32m\] >>> \[\033[0m\]'
 
-. ~/dotfiles/complete/git-completion
-. ~/dotfiles/complete/docker-compose
-. ~/dotfiles/complete/docker
+
+. ~/dotfiles/autocomplete/entrypoint
 
 . ~/dotfiles/git-prompt
 . ~/dotfiles/aliasrc

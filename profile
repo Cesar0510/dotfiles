@@ -47,7 +47,8 @@ export PATH="$PATH:/opt/go1.10.2/bin"
 export PATH="$PATH:$GOPATH/bin/"
 
 export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$PATH:/opt/google-cloud-sdk/bin"
+# export PATH="$PATH:$DOTFILE_LOCAL/google-cloud-sdk/bin"
+. "$DOTFILE_DIR/tools/google_cloud"
 export PATH="$PATH:$DOTFILE_LOCAL/miniconda3/bin"
 export PATH="$PATH:$DOTFILE_BIN"
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6

@@ -1,0 +1,8 @@
+
+
+DIR_=$HOME/dotfiles/autocomplete
+
+. ${DIR_}/docker.autocomplete
+. ${DIR_}/docker-compose.autocomplete
+. ${DIR_}/git-completion.autocomplete
+. ${DIR_}/google_cloud.autocomplete
