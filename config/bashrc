@@ -247,6 +247,7 @@ PS1='\[\033[0;36m\]\[\033[0m\033[0;31m\]{$(date +"%H:%M")}\[\033[0;36m\] @ \w\[\
 #
 DIR_=$HOME/dotfiles
 #. ~/dotfiles/autocomplete/main
+echo -e "\\e[30;47m=== Load Configuration ===\\e[0m"
 . ${DIR_}/config/aliasrc.sh
 . ${DIR_}/autocomplete/main
 . ${DIR_}/tools/main

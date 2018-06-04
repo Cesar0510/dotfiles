@@ -1,6 +1,5 @@
 
-echo 'loading autocomplete'
-
+echo -e "\\e[1m\\e[32m=== Autocomplete ===\\e[0m"
 DIR_AUTO=$HOME/dotfiles/autocomplete
 
 . ${DIR_AUTO}/docker.autocomplete

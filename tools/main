@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo 'loading tools'
+echo -e "\\e[1m\\e[32m=== Tools ===\\e[0m"
 
 DIR_TOOLS=$HOME/dotfiles/tools
 
