@@ -1,8 +1,9 @@
 
+echo 'loading autocomplete'
 
-DIR_=$HOME/dotfiles/autocomplete
+DIR_AUTO=$HOME/dotfiles/autocomplete
 
-. ${DIR_}/docker.autocomplete
-. ${DIR_}/docker-compose.autocomplete
-. ${DIR_}/git-completion.autocomplete
-. ${DIR_}/google_cloud.autocomplete
+. ${DIR_AUTO}/docker.autocomplete
+. ${DIR_AUTO}/docker-compose.autocomplete
+. ${DIR_AUTO}/git-completion.autocomplete
+. ${DIR_AUTO}/google_cloud.autocomplete
