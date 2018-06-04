@@ -21,6 +21,6 @@ alias e="vim"
 
 ## proyectos
 DIR_DOT=$HOME/dotfiles
-. ${DIR_}/config/alias.d/suyo.sh
+. ${DIR_DOT}/config/alias.d/suyo.sh
 
 
