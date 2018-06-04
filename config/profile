@@ -1,0 +1,36 @@
+#### LOCAL VARS
+DOTFILE_DIR="$HOME/dotfiles"
+DOTFILE_LOCAL="$DOTFILE_DIR/local"
+DOTFILE_BIN="$DOTFILE_LOCAL/bin"
+
+
+## RUBY PATH ##
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+RVM_PATH=$HOME/.rvm
+export PATH="$PATH:$RVM_PATH/bin"
+[ -s "$RVM_PATH/scripts/rvm" ] && source "$RVM_PATH/scripts/rvm"
+
+## NODE PATH ##
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+
+## GOLANG PATH ##
+export GOPATH="$HOME/go_workspace"
+export PATH="$PATH:$GOPATH/bin/"
+export PATH="$PATH:/opt/go1.10.2/bin"
+
+## PYTHON PATH ##
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PATH:$PYENV_ROOT/bin"
+export PATH="$PATH:$DOTFILE_LOCAL/miniconda3/bin"
+export PATH="$PATH:$DOTFILE_BIN"
+
+
+## OTHER PATH
+
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:/opt/robo3t/bin
+complete -C $(which aws_completer) aws

@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+echo 'loading tools'
+
+DIR_TOOLS=$HOME/dotfiles/tools
+
+. ${DIR_TOOLS}/extract.tools
+. ${DIR_TOOLS}/git-prompt.tools
+# . ${DIR_TOOLS}/google_cloud.tools
+. ${DIR_TOOLS}/pyenv.tools
+. ${DIR_TOOLS}/stdlib.tools
+
+## Color Prompt
+RED="\[\033[0;31m\]"
+GREEN="\[\033[0;32m\]"
+YELLOW="\[\033[0;33m\]"
+BLUE="\[\033[0;34m\]"
+PURPLE="\[\033[0;35m\]"
+CYAN="\[\033[0;36m\]"
+LIGHT_GREEN="\[\033[1;32m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+
+gc(){
+    git rev-parse --abbrev-ref HEAD
+}

@@ -239,37 +239,21 @@ if ! shopt -oq posix; then
 fi
 
 
-RED="\[\033[0;31m\]"
-GREEN="\[\033[0;32m\]"
-YELLOW="\[\033[0;33m\]"
-BLUE="\[\033[0;34m\]"
-PURPLE="\[\033[0;35m\]"
-CYAN="\[\033[0;36m\]"
-LIGHT_GREEN="\[\033[1;32m\]"
-LIGHT_GRAY="\[\033[0;37m\]"
+
 export GIT_PS1_SHOWDIRTYSTATE=true
-# export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
 PS1='\[\033[0;36m\]\[\033[0m\033[0;31m\]{$(date +"%H:%M")}\[\033[0;36m\] @ \w\[\033[0;32m\]$(__git_ps1 " (%s)")\n\[\033[1;32m\] >>> \[\033[0m\]'
 
-. ~/dotfiles/complete/git-completion
-. ~/dotfiles/complete/docker-compose
-. ~/dotfiles/complete/docker
-
-. ~/dotfiles/git-prompt
-. ~/dotfiles/aliasrc
-. ~/dotfiles/pyenv
+# Autocomplete
+#
+DIR_=$HOME/dotfiles
+#. ~/dotfiles/autocomplete/main
+. ${DIR_}/config/aliasrc.sh
+. ${DIR_}/autocomplete/main
+. ${DIR_}/tools/main
 . ~/.local/bin/virtualenvwrapper.sh
 
-
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export GPG_TTY=$(tty)
-
-
-gc(){
-    git rev-parse --abbrev-ref HEAD
-}
+export rvm_project_rvmrc=1
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
