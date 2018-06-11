@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 
-echo -e "\\e[1m\\e[32m=== Tools ===\\e[0m"
+# echo -e "\\e[1m\\e[32m=== Tools ===\\e[0m"
 
 DIR_TOOLS=$HOME/dotfiles/tools
 
 . ${DIR_TOOLS}/extract.tools
 . ${DIR_TOOLS}/git-prompt.tools
-# . ${DIR_TOOLS}/google_cloud.tools
 . ${DIR_TOOLS}/pyenv.tools
 . ${DIR_TOOLS}/stdlib.tools
+
+[ -s "$RVM_PATH/scripts/rvm" ] && source "$RVM_PATH/scripts/rvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 ## Color Prompt
 RED="\[\033[0;31m\]"

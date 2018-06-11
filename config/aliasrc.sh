@@ -1,6 +1,6 @@
 #Alias
 
-echo -e "\\e[1m\\e[32m=== Alias ===\\e[0m"
+# echo -e "\\e[1m\\e[32m=== Alias ===\\e[0m"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -22,5 +22,3 @@ alias e="vim"
 ## proyectos
 DIR_DOT=$HOME/dotfiles
 . ${DIR_DOT}/config/alias.d/suyo.sh
-
-
