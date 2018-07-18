@@ -12,6 +12,7 @@ filetype off                  " required
 syntax on
 "################################"
 set directory=$HOME/.vim/swapfiles/
+""let g:powerline_pycmd="py3"
 set rtp+=/usr/lib/python3.6/site-packages/powerline/bindings/vim/
 "################################"
 
@@ -25,10 +26,11 @@ Plugin 'editorconfig/editorconfig-vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
+Plugin 'powerline/powerline'
 Plugin 'altercation/vim-colors-solarized'
 
-"" Plugin 'vim-airline/vim-airline'
-"" Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 "" Plugin 'leafgarland/typescript-vim'
 "" Plugin 'pangloss/vim-javascript'
 
@@ -38,7 +40,7 @@ filetype plugin indent on    " required
 
 
 filetype plugin on
-let g:powerline_pycmd="py3"
+
 "#######################"
 
 map <C-n> :NERDTreeToggle<CR>

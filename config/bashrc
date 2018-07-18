@@ -238,8 +238,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-
 export GIT_PS1_SHOWDIRTYSTATE=true
 PS1='\[\033[0;36m\]\[\033[0m\033[0;31m\]{$(date +"%H:%M")}\[\033[0;36m\] @ \w\[\033[0;32m\]$(__git_ps1 " (%s)")\n\[\033[1;32m\] >>> \[\033[0m\]'
 
@@ -265,3 +263,5 @@ export rvm_project_rvmrc=1
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /home/caherdenez/.nvm/versions/node/v8.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/caherdenez/.nvm/versions/node/v8.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

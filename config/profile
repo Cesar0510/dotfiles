@@ -2,7 +2,9 @@
 DOTFILE_DIR="$HOME/dotfiles"
 DOTFILE_LOCAL="$DOTFILE_DIR/local"
 DOTFILE_BIN="$DOTFILE_LOCAL/bin"
+export EDITOR=/usr/bin/vim
 
+export HOSTALIASES=$HOME/dotfiles/hostsalias
 
 ## RUBY PATH ##
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -28,5 +30,7 @@ export PATH="$PATH:$DOTFILE_BIN"
 ## OTHER PATH
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$DOTFILE_LOCAL/google-cloud-sdk/bin
-# export PATH=$PATH:/opt/robo3t/bin
+export PATH=$PATH:/opt/robo3t/bin
 complete -C $(which aws_completer) aws
+export PYTHONDONTWRITEBYTECODE=1
+
