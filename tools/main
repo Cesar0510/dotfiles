@@ -26,3 +26,6 @@ LIGHT_GRAY="\[\033[0;37m\]"
 gc(){
     git rev-parse --abbrev-ref HEAD
 }
+gct() {
+  git diff --name-only --diff-filter=U
+}

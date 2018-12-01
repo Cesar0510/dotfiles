@@ -22,3 +22,6 @@ alias e="vim"
 ## proyectos
 DIR_DOT=$HOME/dotfiles
 . ${DIR_DOT}/config/alias.d/suyo.sh
+
+alias emacs='emacs -nw'
+alias xemacs='emacs'

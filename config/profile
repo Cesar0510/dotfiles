@@ -4,8 +4,6 @@ DOTFILE_LOCAL="$DOTFILE_DIR/local"
 DOTFILE_BIN="$DOTFILE_LOCAL/bin"
 export EDITOR=/usr/bin/vim
 
-export HOSTALIASES=$HOME/dotfiles/hostsalias
-
 ## RUBY PATH ##
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 RVM_PATH=$HOME/.rvm
@@ -18,7 +16,7 @@ export NVM_DIR="$HOME/.nvm"
 ## GOLANG PATH ##
 export GOPATH="$HOME/go_workspace"
 export PATH="$PATH:$GOPATH/bin/"
-export PATH="$PATH:/opt/go1.10.2/bin"
+export PATH="$PATH:/opt/go/bin"
 
 ## PYTHON PATH ##
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
@@ -31,6 +29,13 @@ export PATH="$PATH:$DOTFILE_BIN"
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$DOTFILE_LOCAL/google-cloud-sdk/bin
 export PATH=$PATH:/opt/robo3t/bin
-complete -C $(which aws_completer) aws
-export PYTHONDONTWRITEBYTECODE=1
+# complete -C $(which aws_completer) aws
+export PYTHONDONTWRITEBYTECODE=true
+export HOSTALIASES=$HOME/dotfiles/hostaliases
 
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# export PATH="$PATH:$HOME/.rvm/bin"
+
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

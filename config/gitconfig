@@ -1,7 +1,7 @@
 [user]
 	email = caherdenez@gmail.com
 	name = Cesar Augusto
-	signingkey = DFE180D0602A6644
+	signingkey = 31ABBB74E73B4F9E
 [push]
 	default = matching
 [core]

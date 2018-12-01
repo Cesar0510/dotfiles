@@ -4,7 +4,7 @@ set ts=4
 set nocompatible
 set laststatus=2
 "" highlight ColorColumn ctermbg=gray
-set colorcolumn=120
+set colorcolumn=80
 set nocompatible              " be iMproved, required
 
 filetype off                  " required
@@ -13,7 +13,8 @@ syntax on
 "################################"
 set directory=$HOME/.vim/swapfiles/
 ""let g:powerline_pycmd="py3"
-set rtp+=/usr/lib/python3.6/site-packages/powerline/bindings/vim/
+set rtp+=/home/caherdenez/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+"" set rtp+=/usr/lib/python3/site-packages/powerline/bindings/vim/
 "################################"
 
 set rtp+=~/.vim/bundle/Vundle.vim
